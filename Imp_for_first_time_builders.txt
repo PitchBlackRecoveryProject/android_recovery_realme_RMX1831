@@ -47,7 +47,7 @@ To edit vendorsetup.sh file in the downloaded TWRP source. Head to the below loc
 
 Now add below line at the end.
 
-	add_lunch_combo omni_RMX1833-eng
+	add_lunch_combo omni_RMX1831-eng
 
 3. Save file and exit.
 

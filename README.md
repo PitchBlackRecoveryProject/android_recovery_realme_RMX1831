@@ -1,4 +1,3 @@
-# android_device_realme_RMX1833
  TWRP Device Tree for Realme U1
 ===========================================
 

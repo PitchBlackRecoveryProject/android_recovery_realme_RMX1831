@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-# System properties for Realme 1, get these values through ADB or you can use 'adb shell getprop >> getprop.txt' command to get every prop.
+# System properties for Realme U1, get these values through ADB or you can use 'adb shell getprop >> getprop.txt' command to get every prop.
 
 ro.product.brand=Realme
 ro.product.name=RMX1831
@@ -27,7 +27,7 @@ ro.treble.enabled=true
 persist.sys.usb.config=mtp,adb
 persist.service.adb.enable=1
 persist.service.debuggable=1
-ro.secure=1
+ro.secure=0
 ro.adb.secure=0
 ro.debuggable=1
 ro.allow.mock.location=1

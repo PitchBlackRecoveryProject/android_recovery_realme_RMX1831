@@ -63,6 +63,9 @@ TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/zImage
 
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x14f88000 --tags_offset 0x13f88000 --header_version 1
 
+ENABLE_CPUSETS := true
+ENABLE_SCHEDBOOST := true
+
 # Platform
 
 TARGET_BOARD_PLATFORM := MT6771T
@@ -127,6 +130,7 @@ TW_DEFAULT_BRIGHTNESS := 365
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_USE_TOOLBOX := true
+TW_SCREEN_BLANK_ON_BOOT := false
 TW_NO_SCREEN_BLANK := true
 TW_NO_BATT_PERCENT := false
 TW_EXCLUDE_TWRPAPP := true
@@ -140,6 +144,7 @@ TW_OZIP_DECRYPT_KEY := "acaa1e12a71431ce4a1b21bba1c1c6a2"
 PLATFORM_SECURITY_PATCH := 2019-12-05
 BOARD_OS_VERSION := 9.0.0
 TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_FBE := true
 TW_CRYPTO_FS_TYPE := "ext4"
 TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/bootdevice/by-name/userdata"
 TW_CRYPTO_MNT_POINT := "/data"

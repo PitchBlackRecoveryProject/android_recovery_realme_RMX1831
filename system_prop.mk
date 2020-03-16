@@ -1,7 +1,7 @@
 #
-# Copyright 2019 The Android Open Source Project
-# Copyright (C) 2019 The LineageOS Project
-# Copyright (C) 2013-2019 OmniROM
+# Copyright 2020 The Android Open Source Project
+# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2013-2020 OmniROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,12 +22,7 @@ ro.product.brand=Realme
 ro.product.name=RMX1831
 ro.product.device=RMX1831
 ro.build.product=RMX1831
-sys.usb.configfs=1
-ro.treble.enabled=true
-persist.sys.usb.config=mtp,adb
-persist.service.adb.enable=1
-persist.service.debuggable=1
 ro.secure=0
 ro.adb.secure=0
-ro.debuggable=1
-ro.allow.mock.location=1
+ro.treble.enabled=true
+

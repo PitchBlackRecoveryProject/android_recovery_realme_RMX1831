@@ -25,7 +25,7 @@ LOCAL_PATH := device/realme/RMX1831
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 TARGET_OTA_ASSERT_DEVICE := RMX1831,RMX1833
 
-# Architecture: 
+# Architecture:
 
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a

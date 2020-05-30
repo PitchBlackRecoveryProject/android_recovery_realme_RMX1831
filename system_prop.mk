@@ -22,7 +22,4 @@ ro.product.brand=Realme
 ro.product.name=RMX1831
 ro.product.device=RMX1831
 ro.build.product=RMX1831
-ro.secure=0
-ro.adb.secure=0
 ro.treble.enabled=true
-

@@ -43,7 +43,6 @@ on init
     symlink /vendor/manifest.xml /system_root/system/manifest.xml
     symlink /sbin/mcRegistry /vendor/app/mcRegistry
     symlink /sbin/keystore.mt6771.so /vendor/lib64/hw/keystore.mt6771.so
-    symlink /sbin/gatekeeper.mt6771.so /vendor/lib64/hw/gatekeeper.mt6771.so
 
     start hwservicemanager
     start servicemanager
@@ -69,13 +68,6 @@ service keystore_auth /sbin/keystore_auth
     disabled
     seclabel u:r:recovery:s0
 
-# keystore is started and stopped on demand by TWRP
-service keystore /sbin/keystore /tmp/misc/keystore
-    user root
-    group root drmrpc readproc
-    disabled
-    seclabel u:r:recovery:s0
-
 service gatekeeper-1-0 /sbin/android.hardware.gatekeeper@1.0-service
     user root
     group root
@@ -97,3 +89,14 @@ on property:vendor.sys.listeners.registered=true
     start keymaster-3-0
     start gatekeeper-1-0
     start servicemanager
+
+
+on property:ro.mtk_emmc_support=1
+    # Support A/B feature for emmc boot region
+    symlink /dev/block/mmcblk0boot0 /dev/block/platform/bootdevice/by-name/preloader_a
+    symlink /dev/block/mmcblk0boot1 /dev/block/platform/bootdevice/by-name/preloader_b
+
+on property:ro.mtk_ufs_booting=1
+    # Support A/B feature for ufs boot region
+    symlink /dev/block/sda /dev/block/platform/bootdevice/by-name/preloader_a
+    symlink /dev/block/sdb /dev/block/platform/bootdevice/by-name/preloader_b

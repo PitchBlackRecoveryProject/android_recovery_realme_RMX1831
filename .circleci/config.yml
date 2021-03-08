@@ -10,10 +10,10 @@ jobs:
       VENDOR: 'realme'
       CODENAME: 'RMX1831'
       FLAVOR: 'eng'
-      #TEST_BUILD: 'true'
-      PB_OFFICIAL: 'true'
+      TEST_BUILD: 'true'
+      # PB_OFFICIAL: 'true'
       CHANGELOG: |
-        - Update Prebuilts to RMX1831EX_11.C.20
+        - Test in RMX1831_11_C.22
     working_directory: /home/builder/pitchblack
     steps:
       - run:

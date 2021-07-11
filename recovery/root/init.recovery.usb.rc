@@ -1,18 +1,11 @@
 on early-init
     write /sys/module/musb_hdrc/parameters/kernel_init_done 1
-
-on property:hwservicemanager.ready=true
-    setprop sys.usb.config adb
-
+    
 on boot
 	setprop sys.usb.configfs 1
-	setprop sys.usb.ffs.aio_compat 1
-    setprop sys.usb.config adb
-	setprop vendor.usb.controller "musb-hdrc"
-
-on property:ro.boot.usbcontroller=*
-    setprop sys.usb.controller ${ro.boot.usbcontroller}
-
+        setprop sys.usb.config adb
+	setprop sys.usb.controller "musb-hdrc"
+	
 on fs
     mkdir /config
     mkdir /dev/usb-ffs 0770 shell shell

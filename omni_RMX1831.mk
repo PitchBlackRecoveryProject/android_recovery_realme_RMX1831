@@ -19,20 +19,17 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from RMX1831 device
 $(call inherit-product, device/realme/RMX1831/device.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := RMX1831
 PRODUCT_NAME := omni_RMX1831
 PRODUCT_BRAND := realme
-PRODUCT_MODEL := Realme RMX1831
+PRODUCT_MODEL := Realme U1
 PRODUCT_MANUFACTURER := realme
-PRODUCT_RELEASE_NAME := realme Realme RMX1831
+PRODUCT_RELEASE_NAME := realme U1

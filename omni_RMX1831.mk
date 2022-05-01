@@ -38,3 +38,8 @@ PRODUCT_RELEASE_NAME := Realme U1
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 TW_THEME := portrait_hdpi
+
+
+# System
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sys.binary_xml=false
